@@ -1,0 +1,17 @@
+{
+  "name": "otto",
+  "version": "1.0.0",
+  "type": "app",
+  "dependencies": {
+    "hoodie-app": "git://github.com/hoodiehq/hoodie-server.git",
+    "hoodie-worker-users": "git://github.com/hoodiehq/worker-users.git"
+  },
+  "subdomain": "hoodie-otto",
+  "domains": [
+    "admin.hoodie-otto.jit.su",
+    "couch.hoodie-otto.jit.su"
+  ],
+  "scripts": {
+    "start": "node node_modules/hoodie-app/bin/start"
+  }
+}
