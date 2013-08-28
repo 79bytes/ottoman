@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>brick components in a hood.ie app</title>
+    <link rel="stylesheet" href="assets/vendor/brick/brick-1.0beta6.css"/>
+    <script src="assets/vendor/brick/brick-1.0beta6.js"></script>
+
+    <style>
+      x-deck,
+      x-flipbox,
+      x-calendar,
+      x-iconbutton
+      {
+        background-color: lightsteelblue; 
+      }
+    </style>
+  </head>
+  <body>
+    <h1>brick x-components (<a href="http://mozilla.github.io/brick/docs.html">link</a>)</h1>
+    <h2>in a <a href="http://hood.ie/">hood.ie</a> application</h2>
+    <hr/>
+    <div style="width:33%; left:0;right:0;margin:auto;">
+
+      <!-- x-appbar -->
+      <code>x-appbar:</code>
+      <x-appbar heading="Ohai Otto" subheading=":)">
+        <div>=</div>
+        <header>Title</header>
+        <div>+</div>
+        <div>?</div>
+      </x-appbar>
+
+      <hr/>
+
+      <!-- x-calendar -->
+      <code>x-calendar:</code>
+      <x-calendar controls view="1978-05-21" chosen="1978-05-21" multiple></x-calendar>
+
+      <hr/>
+
+      <!-- x-datepicker -->
+      <code>x-datepicker:</code>
+      <x-datepicker></x-datepicker>
+
+      <hr/>
+
+      <!-- x-deck -->
+      <code>x-deck (& x-card):</code>
+      <x-deck>
+        <x-card>1st <span>card</span></x-card>
+        <x-card>2nd <span>card</span></x-card>
+      </x-deck>
+    
+      <hr/>
+
+      <!-- x-flipbox -->
+      <code>x-flipbox:</code>
+      <x-flipbox>
+        <div>I'm the front</div>
+        <div>I'm the back</div>
+      </x-flipbox>
+
+      <hr/>
+
+      <!-- x-iconbutton -->
+      <code>x-iconbutton:</code>
+      <x-iconbutton>
+        <strong>this</strong> <em>is</em> an <u>icon button</u>
+      </x-iconbutton>
+
+      <hr/>
+
+      <!-- x-layout -->
+      <code>x-layout:</code>
+      <x-layout>
+        <header>layout header</header>
+        <section>layout section <p>filler filler filler filler</p></section>
+        <footer>layout footer</section>
+      </x-layout>
+
+      <hr/>
+
+      <!-- x-slidebox -->
+      <code>x-slidebox:</code>
+      <x-slidebox>
+          <x-slides>
+              <x-slide>Slide 0</x-slide>
+              <x-slide>Slide 1</x-slide>
+              <x-slide selected>Slide 2</x-slide>
+              <x-slide>Slide 3</x-slide>
+              <x-slide>Slide 4</x-slide>
+              <x-slide>Slide 5</x-slide>
+              <x-slide>Slide 6</x-slide>
+          </x-slides>
+      </x-slidebox>
+
+      <hr/>
+
+      <!-- x-slider -->
+      <code>x-slider:</code>
+      <x-slider></x-slider
+    </div>
+    
+    <script>
+        var calendar = document.querySelector('x-calendar');
+        //console.log(calendar);
+        calendar.labels = {
+          prev: '<<',//"&laquo;",
+          next: '>>',//"&raquo;",
+          months: ['J','F','M','A','M','J','J','A','S','O','N','D'],
+          weekdays: ['Su','M','T','W','Th','F','Sa']
+        };
+
+        var flipbox = document.querySelector('x-flipbox');
+        flipbox.addEventListener('click', function() {
+          flipbox.toggle();
+        })
+    </script>
+  </body>
+</html>
